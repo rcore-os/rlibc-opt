@@ -1,3 +1,5 @@
+.text
+.global memcpy
 memcpy:
 __memcpy_fwd:
 	mov rax, rdi
@@ -20,6 +22,7 @@ l4:	movsb
 	jnz l4
 l3:	ret
 
+.global memset
 memset:
 	movzx rax, sil	
 	mov r8, 0x101010101010101
@@ -90,7 +93,8 @@ l8:	xor edx, edx
 	sub rcx, rdx
 	add rdi, rdx
 	jmp l7
-	
+
+.global memmove	
 memmove:
 	mov rax, rdi
 	sub rax, rsi
