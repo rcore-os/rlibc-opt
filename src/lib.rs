@@ -5,7 +5,7 @@
 
 // copy from musl libc
 #[cfg(target_arch = "x86_64")]
-global_asm!(include_str!("x86_64.S"));
+global_asm!(include_str!("x86_64_intel.S"));
 
 // copy from compiler-builtins
 #[no_mangle]
